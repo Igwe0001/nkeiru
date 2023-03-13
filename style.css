@@ -9,8 +9,6 @@
 :root {
   /* COLORS */
   --page-blue: #001c3d;
-  --text-gray: #f2f3f5;
-  --txet-gray2: #eceef0;
   --white: #fff;
 
   /* FONTS */
@@ -25,7 +23,6 @@ html,
 body {
   min-height: 100%;
   font-family: var(--poppins);
-  background-color: var(--page-blue);
 }
 
 /* header styles */
@@ -34,7 +31,7 @@ header {
   width: 100%;
   height: 10rem;
   background-color: var(--page-blue);
-  position: fixed;
+  /* position: fixed; */
 }
 
 /* nav styles */
@@ -79,7 +76,6 @@ ul {
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
-  
 }
 
 ul.active {
@@ -89,7 +85,7 @@ ul.active {
 
 .nav__links {
   margin-top: 165%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s all cubic-bezier(0.89, -0.01, 0, 0.96);
   transform: translateY(100px);
   opacity: 0;
   visibility: hidden;
@@ -109,7 +105,7 @@ li {
 
 li a {
   color: var(--page-blue);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 /* Hamburger styles */
@@ -149,6 +145,92 @@ li a {
   transform: rotate(-45deg) translate(4px, -3px);
 }
 
+/* MAIN STYLES */
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+/* GENERAL SECTION STYLES */
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.section__container {
+  width: 90%;
+  height: inherit;
+  max-width: 160rem;
+  margin: auto;
+}
+
+/* About section */
+
+.about {
+  background-color: var(--page-blue);
+  padding-bottom: 5rem;
+}
+
+.about__container {
+  padding-top: 2rem;
+}
+
+.about__container h1 {
+  color: var(--white);
+  font-size: 3.8rem;
+  font-weight: 500;
+}
+
+.about__info {
+  margin-top: 1rem;
+}
+
+.about__image {
+  /* outline: 1px solid white; */
+  height: 35rem;
+  width: 90%;
+  background-color: var(--white);
+  background-image: url("./images/nkeiru.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about__text {
+  margin-top: 1rem;
+}
+
+.about__text--paragraph p {
+  color: var(--white);
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.about__text--link {
+  width: 18.5rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid white;
+}
+
+.about__text--link a {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  margin-left: 0.5rem;
+}
+
+/* MEDIA QUARIES */
+
 @media screen and (min-width: 800px) {
   /* nav link styles */
 
@@ -181,5 +263,33 @@ li a {
 
   .hamburger__container {
     display: none;
+  }
+
+  .about__info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+    width: 55%;
+    margin: auto;
+  }
+
+  .about__container h1 {
+    text-align: center;
+    font-size: 5.5rem;
+  }
+
+  .about__image {
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .about__text {
+    width: 35rem;
+    height: 70rem;
+    margin-top: 0;
+  }
+
+  .about__text--link {
+    width: 18.5rem;
   }
 }
